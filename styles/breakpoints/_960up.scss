@@ -1,0 +1,24 @@
+.nav-menu {
+	display: flex;
+	width:auto;
+	position: static;
+
+	li{
+		margin: 0 10px;
+		:hover{
+			background-color: $--main-bg-cCream;
+			color: $--main-font-cBlue;
+		}
+	}
+}
+
+.hamburger {
+	display: none;
+}
+
+footer {
+	ul{
+		display: flex;
+		justify-content: center;
+	}
+}

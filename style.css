@@ -1,0 +1,31 @@
+/*
+Theme Name: Meiiku02
+Author: そんほんす
+Author URI: https://horumont.info
+Description: 命育サイトの練習用その２のサイトです。
+Version: 1.0
+*/
+
+/* variables */
+
+:root {
+  /* Colors */
+  --global--color-black: #333;
+  --global--color-gray: #39414d;
+  --global--color-light-gray: #f0f0f0;
+  --global--color-green: #a4fafa;
+  --global--color-red: #ffbdc3;
+  --global--color-orange: #fff7e5;
+  --global--color-white: #fff;
+  --global--color-white-50: rgba(255, 255, 255, 0.5);
+  --global--color-white-90: rgba(255, 255, 255, 0.9);
+  --global--color-primary: var(--global--color-gray);
+
+  /* Body text color, site title, footer text color. */
+  --global--color-secondary: var(--global--color-gray);
+
+  /* Headings */
+  --global--color-primary-hover: var(--global--color-primary);
+  --global--color-background: var(--global--color-orange);
+
+}
