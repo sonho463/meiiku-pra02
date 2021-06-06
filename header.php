@@ -2,8 +2,8 @@
 <html lang="<?php language_attributes(); ?>">
 
 <?php
-if (is_home(  )):
-	$pageTitle = 'TOP';
+if (is_home()):
+	$pageTitle = 'BLOG';
 else :
 	$pageTitle = get_the_title(  );
 endif;
