@@ -14,7 +14,10 @@
 	if (have_posts()) {
 		while (have_posts()) {
 			the_post(); ?>
-			<h3><?php the_title(); ?></h3>
+
+			<a href="<?php echo the_permalink(  ) ?>">
+				<h3><?php the_title(); ?></h3>
+			</a>
 			<p><?php the_author(); ?></p>
 
 		<?php

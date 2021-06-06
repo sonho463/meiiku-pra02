@@ -1,9 +1,13 @@
+
+
 <div class="header-nav">
-	<a href="index.html">
+	<a href="<?php bloginfo('url') ?>">
 		<div class="nav-logo">
-			<div><?php bloginfo('name');?></div>
+			<div><?php bloginfo('name'); ?></div>
 		</div><!-- /.nav-logo -->
 	</a>
+
+
 	<nav>
 		<ul class="nav-menu" id="mainNav">
 			<li class="nav-item"><a href="./materials_index.html" class="navlink">教材検索・ダウンロード
