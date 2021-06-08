@@ -1,17 +1,20 @@
 <?php get_header(); ?>
+<header>
+	<?php get_template_part('includes/header'); ?>
+</header>
 
-<?php get_template_part('includes/header'); ?>
-
-<header class="content-width">
+<div class="content-width">
 	<h1><?php the_title(); ?>
 	</h1>
 	<p>テンプレートはpage.php</p>
 
-</header>
+</div>
 
 <main class="content-width">
 	<?php the_content(); ?>
+
 	
+
 
 </main>
 

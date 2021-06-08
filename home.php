@@ -4,7 +4,7 @@
 </header>
 
 <main class="content-width">
-
+	<h2>home.php</h2>
 	<h2>コラム〜授業をする前に<br>ここのループではWordPress標準の投稿機能の記事を表示します。</h2>
 
 

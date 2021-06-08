@@ -7,6 +7,8 @@
 		</div><!-- /.nav-logo -->
 	</a>
 
+	<?php wp_nav_menu(); ?>
+
 
 	<nav>
 		<ul class="nav-menu" id="mainNav">

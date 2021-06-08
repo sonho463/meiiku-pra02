@@ -1,18 +1,20 @@
 <?php get_header(); ?>
 
-<?php get_template_part('includes/header'); ?>
+<header>
+	<?php get_template_part('includes/header'); ?>
+</header>
 
-<header class="content-width">
+<div class="content-width">
 	<h1><?php the_title(); ?>
 	</h1>
 	<p>フロント</p>
 	<p>テンプレートはfront-page.php</p>
 	<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/site-map.png" alt="">
-</header>
+</div>
 
 <main class="content-width">
 	<?php the_content(); ?>
-
+	
 
 </main>
 
