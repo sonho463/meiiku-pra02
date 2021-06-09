@@ -5,7 +5,7 @@
 
 <main class="content-width">
 
-	<h2>コラム〜授業をする前に<br>ここのループではWordPress標準の投稿機能の記事を表示します。</h2>
+	<h2>こちらはindex.phpテンプレートです</h2>
 
 
 	<h2>投稿一覧を表示</h2>

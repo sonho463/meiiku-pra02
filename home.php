@@ -18,6 +18,7 @@
 				<h3><?php the_title(); ?></h3>
 			</a>
 			<p><?php the_author(); ?></p>
+			<hr>
 
 		<?php
 		}
