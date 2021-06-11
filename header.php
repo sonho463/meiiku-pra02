@@ -2,10 +2,12 @@
 <html lang="<?php language_attributes(); ?>">
 
 <?php
-if (is_home()):
-	$pageTitle = 'BLOG';
+if (is_home()) :
+	$pageTitle = 'コラム〜授業をする前に';
+elseif (is_archive()) :
+	$pageTitle =  wp_strip_all_tags( get_the_archive_title() );
 else :
-	$pageTitle = get_the_title(  );
+	$pageTitle = get_the_title();
 endif;
 ?>
 
@@ -20,4 +22,4 @@ endif;
 </head>
 
 <body <?php body_class(); ?>>
-<?php wp_body_open(); ?>
+	<?php wp_body_open(); ?>

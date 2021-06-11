@@ -5,10 +5,6 @@ body {
   box-sizing: border-box;
 }
 
-body img {
-  width: 80%;
-}
-
 body > a:link, body a:active, body a:hover, body a:visited {
   color: #1470a3;
 }
@@ -79,6 +75,10 @@ nav {
 
 .nav-menu.open {
   display: inline-block;
+}
+
+.hero-img {
+  width: 80vw;
 }
 
 footer {

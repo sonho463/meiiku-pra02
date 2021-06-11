@@ -2,9 +2,9 @@
 <header>
 	<?php get_template_part('includes/header'); ?>
 </header>
-<h1>教材の個別投稿ページです</h1>
+<h1>実績の個別投稿ページです</h1>
 
-<h2>single-materials.php</h2>
+<h2>single-performance.php</h2>
 
 <?php
 if (have_posts()) :

@@ -3,9 +3,7 @@ body {
     "Yu Mincho", "MS PMincho", serif;
   margin: 0;
   box-sizing: border-box;
-  img {
-    width: 80%;
-  }
+
 	> a:link,a:active,a:hover,a:visited {
 		color: $--main-font-cBlue;
 	}
@@ -75,6 +73,12 @@ nav {
     display: inline-block;
   }
 }
+
+.hero-img {
+	width: 80vw
+}
+
+
 
 footer {
   height: auto;

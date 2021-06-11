@@ -9,12 +9,12 @@
 	</h1>
 	<p>フロント</p>
 	<p>テンプレートはfront-page.php</p>
-	<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/site-map.png" alt="">
+	<img class="hero-img" src="<?php echo get_stylesheet_directory_uri(); ?>/images/site-map.png" alt="">
 </div>
 
 <main class="content-width">
 	<?php the_content(); ?>
-	
+
 
 </main>
 
