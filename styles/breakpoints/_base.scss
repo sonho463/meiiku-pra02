@@ -4,10 +4,6 @@ body {
   margin: 0;
   box-sizing: border-box;
 
-	> a:link,a:active,a:hover,a:visited {
-		color: $--main-font-cBlue;
-	}
-
 }
 
 li {
@@ -87,9 +83,9 @@ footer {
   padding: 5px 20px;
 	text-align: center;
   color: $--main-font-cWhite;
-  background-color: $--main-bg-cBlue;
+  background-color: $--meiiku-cOrange;
 	a:link,a:active,a:hover,a:visited {
-		color: $--main-font-cWhite;
+		color: $--main-font-cGray;
 	}
 
 	ul {
@@ -97,13 +93,32 @@ footer {
 		padding: 0;
 		li {
 			margin: 0 10px;
+			&:hover{
+				background-color: $--meiiku-cPink;
+			}
 		}
 	}
 }
 
+// --------
+// single-post.php
+// --------
+
+.post {
+
+	h3{
+		font-size: 40px;
+	}
+}
+
+.content{
+	background-color: $--meiiku-cBlue;
+}
+
+
 
 // --------
-// contact.html
+// contact
 // --------
 
 .form {

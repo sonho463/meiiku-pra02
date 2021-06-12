@@ -3,31 +3,51 @@
 	<?php get_template_part('includes/header'); ?>
 </header>
 
-
-<h1>コラムの投稿インデックスページ</h1>
-<h2>archive.phpです</h2>
-
 <?php
 if (have_posts()) :
-	while (have_posts()) :
-		the_post();
 ?>
 
-<?php
-$args = array( 'posts_per_page' => 10, 'order'=> 'ASC', 'orderby' => 'title' );
-$postslist = get_posts( $args );
-foreach ( $postslist as $post ) :
-  setup_postdata( $post ); ?>
-	<div>
-		<?php the_date(); ?>
-		<br />
-		<?php the_title(); ?>
-		<?php the_excerpt(); ?>
-	</div>
-<?php
-endforeach;
-wp_reset_postdata();
-?>
+	<div class="content-width">
+		<h1>
+			<?php
+			if (is_category()) {
+				echo 'カテゴリ「' . single_cat_title('', false) .  '」の投稿一覧';
+			} elseif (is_tag()) {
+				echo 'タグ「' . single_tag_title('', false) .  '」の投稿一覧';
+			} else {
+				echo 'blog';
+			}
+			?>
+		</h1>
+		<h2>archive.phpです</h2>
+	</div><!-- /.content-width -->
+
+	<?php
+	$category_slug = get_query_var('category_name');
+	$args = array(
+		'category_name' => $category_slug,
+
+	);
+	$postslist = get_posts($args);
+	?>
+
+	<?php
+	while (have_posts()) :
+		the_post();
+	?>
+
+
+
+		<div class="content-width">
+			<?php the_date(); ?>
+			<br />
+			<?php the_title(); ?>
+			<?php the_excerpt(); ?>
+		</div>
+		<hr>
+		<?php
+		// wp_reset_postdata();
+		?>
 
 
 

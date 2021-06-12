@@ -5,10 +5,6 @@ body {
   box-sizing: border-box;
 }
 
-body > a:link, body a:active, body a:hover, body a:visited {
-  color: #1470a3;
-}
-
 li {
   list-style: none;
 }
@@ -86,11 +82,11 @@ footer {
   padding: 5px 20px;
   text-align: center;
   color: #ffffff;
-  background-color: #1470a3;
+  background-color: #fff7e5;
 }
 
 footer a:link, footer a:active, footer a:hover, footer a:visited {
-  color: #ffffff;
+  color: #707070;
 }
 
 footer ul {
@@ -100,6 +96,18 @@ footer ul {
 
 footer ul li {
   margin: 0 10px;
+}
+
+footer ul li:hover {
+  background-color: #ffbdc3;
+}
+
+.post h3 {
+  font-size: 40px;
+}
+
+.content {
+  background-color: #a4fafa;
 }
 
 .mail-form {

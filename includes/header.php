@@ -19,13 +19,10 @@
 		))
 	?>
 
-	
-		<?php echo $menu_list ?>
 
 		<button class="hamburger">
 			<span></span><span></span><span></span>
 		</button>
 	</nav>
-	<h1><?php echo $menu_id ?></h1>
 
 </div><!-- /.header-nav -->

@@ -3,9 +3,11 @@
 	<?php get_template_part('includes/header'); ?>
 </header>
 
-<h1>コラム〜ブログ投稿ページ</h1>
+<div class="content-width">
+	<h1>コラム〜ブログ投稿ページ</h1>
 
-<h2>single-post.php</h2>
+	<h2>single-post.php</h2>
+</div><!-- /.content-width -->
 
 <?php
 if (have_posts()) :
@@ -13,22 +15,25 @@ if (have_posts()) :
 		the_post();
 ?>
 
-		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+		<article id="post-<?php the_ID(); ?>" <?php post_class('content-width'); ?>>
 
-			<?php the_post_thumbnail('large'); ?>
+			<?php the_post_thumbnail('thumbnail'); ?>
 
 			<h3><?php the_title(); ?></h3>
-			<p><?php echo get_the_date(); ?></p>
-			<p><?php the_category(); ?></p>
+			<span><?php echo get_the_date(); ?></span>
+			<span><?php the_category(); ?></span>
+			<span><?php the_author(); ?></span>
 			<p><?php the_tags(); ?></p>
-			<p><?php the_author(); ?></p>
 			<p><?php wp_link_pages(); ?></p>
-			<p><?php the_content(); ?></p>
+			<div class="content">
+				<p><?php the_content(); ?></p>
+
+			</div><!-- /.content -->
 
 
 		</article>
 
-		<ul>
+		<ul class="content-width">
 			<li>
 				<?php previous_post_link(); ?>
 			</li>
