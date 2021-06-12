@@ -17,7 +17,6 @@
 	<?php the_content(); ?>
 	<?php wp_nav_menu( array('theme_location' => 'global-menu'))?>
 	<?php wp_nav_menu( array('theme_location' => 'footer-menu'))?>
-	<?php wp_nav_menu( array('theme_location' => 'z-extra-menu'))?>
 
 
 </main>

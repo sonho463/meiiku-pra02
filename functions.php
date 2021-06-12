@@ -6,9 +6,9 @@ add_action('init', function () {
 	register_nav_menus([
 		'global-menu' => 'グローバルメニュー',
 		'footer-menu' => 'フッターメニュー',
-		'z-extra-menu' => 'エクストラメニュー',
 	]);
 });
+
 
 function meiiku_create_post_type(){
 	register_post_type( 'materials',
