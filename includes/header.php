@@ -1,14 +1,23 @@
 
 
 <div class="header-nav">
-	<a href="<?php bloginfo('url') ?>">
-		<div class="nav-logo">
-			<div><?php bloginfo('name'); ?></div>
-		</div><!-- /.nav-logo -->
-	</a>
+	<div class="header-nav__logo">
+		<a href="<?php bloginfo('url') ?>">
+		<img src="<?php echo get_template_directory_uri(); ?>/images/img_logo.png" alt="">
+		</a>
+		<div class="header-nav__text">
+			<h3>医師専門家×ママクリエイターによる</h3>
+			<h2>
+			家庭でできる性教育サイト
+			</h2>
+		</div><!-- /.header-nav__text -->
+
+	</div><!-- /.header-nav__logo -->
 
 	<nav>
-		<?php wp_nav_menu([
+		<?php
+		wp_nav_menu([
+			'theme-location' => 'global-menu',
 			'menu_class'      => 'nav-menu',
 		]); ?>
 		<button class="hamburger">

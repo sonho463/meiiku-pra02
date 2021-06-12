@@ -20,23 +20,25 @@ li {
 }
 
 .header-nav {
-  display: flex;
+  // display: flex;
   padding: 5px 20px;
-  justify-content: space-between;
+  // justify-content: space-between;
 	flex-wrap: wrap;
   height: auto;
-  background-color: $--main-bg-cBlue;
+  background-color: $--meiiku-cOrange;
 	a:link,a:active,a:hover,a:visited {
-		color: $--main-font-cWhite;
+		color: $--main-font-cGray;
 	}
 }
 
-.nav-logo {
-	font-size: 24px;
-	line-height: 45px;
-	color: $--main-font-cWhite;
+
+.header-nav__logo {
+	display: flex;
 }
 
+.header-nav__text{
+	margin-left: 20px;
+}
 nav {
   position: relative;
 }

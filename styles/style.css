@@ -19,22 +19,22 @@ li {
 }
 
 .header-nav {
-  display: flex;
   padding: 5px 20px;
-  justify-content: space-between;
   flex-wrap: wrap;
   height: auto;
-  background-color: #1470a3;
+  background-color: #fff7e5;
 }
 
 .header-nav a:link, .header-nav a:active, .header-nav a:hover, .header-nav a:visited {
-  color: #ffffff;
+  color: #707070;
 }
 
-.nav-logo {
-  font-size: 24px;
-  line-height: 45px;
-  color: #ffffff;
+.header-nav__logo {
+  display: flex;
+}
+
+.header-nav__text {
+  margin-left: 20px;
 }
 
 nav {
