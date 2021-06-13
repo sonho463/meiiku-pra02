@@ -20,6 +20,7 @@ function meiiku_create_post_type(){
 		'public' => true,
 		'menu_position' => 5,
 		'has_archive' => true,
+		'show_in_rest' => true,
 		'supports' => array(
 			'title',
 			'editor',
@@ -36,6 +37,7 @@ function meiiku_create_post_type(){
 			'singular_name' => '導入実績',
 		),
 		'public' => true,
+		'show_in_rest' => true,
 		'menu_position' => 6,
 		'has_archive' => true,
 		'supports' => array(

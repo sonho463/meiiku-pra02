@@ -3,6 +3,7 @@ body {
     "Yu Mincho", "MS PMincho", serif;
   margin: 0;
   box-sizing: border-box;
+	background-color: $--meiiku-cOrange;
 
 }
 
@@ -82,7 +83,7 @@ footer {
   height: auto;
   padding: 5px 20px;
 	text-align: center;
-  color: $--main-font-cWhite;
+  color: $--main-font-cGray;
   background-color: $--meiiku-cOrange;
 	a:link,a:active,a:hover,a:visited {
 		color: $--main-font-cGray;

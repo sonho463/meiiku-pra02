@@ -38,7 +38,6 @@ if (have_posts()) :
 endif;
 ?>
 
-<?php get_template_part('includes/footer'); ?>
 
 <?php get_footer(); ?>
 

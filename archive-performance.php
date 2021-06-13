@@ -41,7 +41,6 @@ endif;
 
 
 
-<?php get_template_part('includes/footer'); ?>
 
 <?php get_footer(); ?>
 

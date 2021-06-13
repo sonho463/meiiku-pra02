@@ -3,6 +3,7 @@ body {
   font-family: "Times New Roman", "YuMincho", "Hiragino Mincho ProN", "Yu Mincho", "MS PMincho", serif;
   margin: 0;
   box-sizing: border-box;
+  background-color: #fff7e5;
 }
 
 li {
@@ -81,7 +82,7 @@ footer {
   height: auto;
   padding: 5px 20px;
   text-align: center;
-  color: #ffffff;
+  color: #707070;
   background-color: #fff7e5;
 }
 

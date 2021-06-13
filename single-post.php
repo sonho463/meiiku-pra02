@@ -45,11 +45,6 @@ if (have_posts()) :
 	<?php endwhile; ?>
 <?php endif; ?>
 
-
-
-
-<?php get_template_part('includes/footer'); ?>
-
 <?php get_footer(); ?>
 
 </body>

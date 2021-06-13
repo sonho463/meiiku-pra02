@@ -13,13 +13,12 @@
 <main class="content-width">
 	<?php the_content(); ?>
 
-	
+
 
 
 </main>
 
 
-<?php get_template_part('includes/footer'); ?>
 
 <?php get_footer(); ?>
 
