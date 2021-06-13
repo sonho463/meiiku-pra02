@@ -20,10 +20,49 @@ if (have_posts()) :
 			<?php the_post_thumbnail('thumbnail'); ?>
 
 			<h3><?php the_title(); ?></h3>
-			<span><?php echo get_the_date(); ?></span>
-			<span><?php the_category(); ?></span>
-			<span><?php the_author(); ?></span>
-			<p><?php the_tags(); ?></p>
+			<ul>
+				<li>
+					<p><?php the_author(); ?></p>
+				</li>
+				<li>
+					カテゴリ：<?php the_category('<span>'); ?>
+				</li>
+				<li>
+					タグ：
+					<?php
+					$tags = get_the_tags();
+					if ($tags) :
+						foreach ($tags as $tag) :
+							$name = $tag->name;
+							$slug = $tag->slug;
+					?>
+							<a href="<?php get_template_directory_uri(); ?>/tag/<?php echo $slug; ?>">#<?php echo $name; ?></a>,
+						<?php endforeach; ?>
+					<?php endif; ?>
+
+				</li>
+				<li>
+					<?php
+					$year = get_the_date('Y');
+					$month = get_the_date('m');
+					$day = get_the_date('d');
+					?>
+					<a href="<?php echo get_year_link($year); ?>;">
+						<span><?php echo get_the_date('Y'); ?></span>
+					</a>年
+					<a href="<?php echo get_month_link($year, $month); ?>;">
+						<span><?php echo get_the_date('m'); ?></span>
+					</a>月
+					<a href="<?php echo get_day_link($year, $month, $day); ?>;">
+						<span><?php echo get_the_date('d'); ?></span>
+					</a>日
+
+			</ul>
+
+
+
+			<hr>
+
 			<p><?php wp_link_pages(); ?></p>
 			<div class="content">
 				<p><?php the_content(); ?></p>
