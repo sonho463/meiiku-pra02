@@ -30,6 +30,7 @@
 				<h3><?php the_title(); ?></h3>
 			</a>
 			<p><?php the_author(); ?></p>
+			<p><?php the_date(); ?></p>
 			<hr>
 
 		<?php
