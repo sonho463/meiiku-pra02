@@ -11,15 +11,9 @@ if (have_posts()) :
 		<h1>
 			<?php
 			if (is_category()) {
-				echo 'カテゴリ「' . single_term_title('', false) .  '」の投稿一覧';
+				echo 'カテゴリ「' . single_cat_title('', false) .  '」の投稿一覧';
 			} elseif (is_tag()) {
-				echo 'タグ「' . single_term_title('', false) .  '」の投稿一覧';
-			} elseif (is_day()) {
-				echo '「' . get_the_date('Y年n月j日') .  '」の投稿一覧';
-			} elseif (is_month()) {
-				echo '「' . get_the_date('Y年n月') .  '」の投稿一覧';
-			} elseif (is_year()) {
-				echo '「' . get_the_date('Y年') .  '」の投稿一覧';
+				echo 'タグ「' . single_tag_title('', false) .  '」の投稿一覧';
 			} else {
 				echo 'blog';
 			}
@@ -28,6 +22,14 @@ if (have_posts()) :
 		<h2>archive.phpです</h2>
 	</div><!-- /.content-width -->
 
+	<?php
+	$category_slug = get_query_var('category_name');
+	$args = array(
+		'category_name' => $category_slug,
+
+	);
+	$postslist = get_posts($args);
+	?>
 
 	<?php
 	while (have_posts()) :
