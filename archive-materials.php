@@ -3,9 +3,7 @@
 	<?php get_template_part('includes/header'); ?>
 </header>
 
-
-<?php
-if (have_posts()) : ?>
+<?php if (have_posts()): ?>
 	<div class="content-width">
 
 		<h1>教材のインデックスページ</h1>
@@ -97,7 +95,6 @@ if (have_posts()) : ?>
 
 <?php
 	endwhile;
-
 endif;
 ?>
 

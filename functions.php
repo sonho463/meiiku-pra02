@@ -128,5 +128,26 @@ function create_performance_taxonomy()
 
 		)
 	);
+
+	register_taxonomy(
+		'performance_tag', // タクソノミー名
+		'performance', // 関連付けるカスタム投稿タイプ
+		array(
+			'label' => '教材タグ', // 管理画面のメニューに表示されるテキスト
+			'singular_label' => '教材タグ', // 管理画面のメニューに表示されるテキスト
+			'labels' => array(
+				'all_items' => '教材タグ一覧', // 管理画面のメニューの下層に表示されるテキスト
+				'add_new_item' => '教材タグを追加', // タームの新規追加画面に表示されるテキスト
+			),
+			'public' => true,
+			'show_ui' => true,
+			'show_in_rest' => true, //これがないと投稿画面に表示されない
+			'show_in_nav_menus' => true,
+			'show_admin_column' => true,
+			'hierarchical' => false, // 階層関係を持たせるかどうか
+			'show_in_quick_edit' => true,
+
+		)
+	);
 }
 add_action('init', 'create_performance_taxonomy');
