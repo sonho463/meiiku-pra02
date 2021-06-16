@@ -77,7 +77,8 @@ if (have_posts()) : ?>
 							$term_ids = implode(',', $post_terms);
 							$terms = wp_list_categories('title_li=&style=none&echo=0&taxonomy=' . $taxonomy . '&include=' . $term_ids);
 							$terms = rtrim(trim(str_replace('<br />',  $separator, $terms)), $separator);
-							$terms = str_replace('">','">#',$terms);
+							//タグの先頭に＃をつける
+							$terms = str_replace('">', '">#', $terms);
 
 							// 投稿のカテゴリーを表示
 							echo  $terms;
