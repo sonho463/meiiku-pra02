@@ -3,7 +3,7 @@
 	<?php get_template_part('includes/header'); ?>
 </header>
 
-<?php if (have_posts()): ?>
+<?php if (have_posts()) : ?>
 	<div class="content-width">
 
 		<h1>教材のインデックスページ</h1>
@@ -23,20 +23,7 @@
 				</p>
 				<ul>
 					<li>
-						<?php
-						$year = get_the_date('Y');
-						$month = get_the_date('m');
-						$day = get_the_date('d');
-						?>
-						<a href="<?php echo get_year_link($year); ?>;">
-							<span><?php echo get_the_date('Y'); ?></span>
-						</a>年
-						<a href="<?php echo get_month_link($year, $month); ?>;">
-							<span><?php echo get_the_date('m'); ?></span>
-						</a>月
-						<a href="<?php echo get_day_link($year, $month, $day); ?>;">
-							<span><?php echo get_the_date('d'); ?></span>
-						</a>日
+						<?php the_date(); ?>
 					</li>
 					<li>
 						<?php the_author(); ?>

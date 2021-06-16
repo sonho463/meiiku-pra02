@@ -37,9 +37,16 @@ if (have_posts()) :
 
 
 		<div class="content-width">
-			<a href="<?php echo the_permalink() ?>">
-				<h3><?php the_title(); ?></h3>
-			</a>
+			<div class="post-heading">
+				<a href="<?php echo the_permalink() ?>">
+					<h3><?php the_title(); ?></h3>
+				</a>
+				<?php
+				if(has_post_thumbnail()){
+					the_post_thumbnail( 'medium' );
+				}
+				?>
+			</div><!-- /.post-heading -->
 			<ul>
 				<li>
 					<p><?php the_author(); ?></p>
