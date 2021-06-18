@@ -21,10 +21,11 @@
 						<?php the_title(); ?>
 					</a>
 				</p>
+				<?php get_template_part('includes/get_post_thumbnail' )?>
 				<ul>
 					<li>
 					<?php the_date(); ?>
-					
+
 					</li>
 					<li>
 						<?php the_author(); ?>

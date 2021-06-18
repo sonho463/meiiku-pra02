@@ -13,8 +13,7 @@ if (have_posts()) :
 ?>
 
 		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-			<?php the_post_thumbnail('medium'); ?>
-
+		<?php get_template_part('includes/get_post_thumbnail' )?>
 
 			<h3><?php the_title(); ?></h3>
 			<p><?php echo get_the_date(); ?></p>

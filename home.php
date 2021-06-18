@@ -32,14 +32,7 @@
 						<a href="<?php echo the_permalink() ?>">
 							<h3><?php the_title(); ?></h3>
 						</a>
-						<?php
-						if (has_post_thumbnail()) {
-							the_post_thumbnail('medium');
-						} else { ?>
-							<img src="<?php echo get_template_directory_uri(); ?>/images/img_logo.png" alt="デフォルト画像">
-						<?php
-						}
-						?>
+						<?php get_template_part('includes/get_post_thumbnail' )?>
 					</div><!-- /.post-heading -->
 					<div class="article-description">
 						<?php the_author(); ?>

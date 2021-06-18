@@ -17,7 +17,7 @@ if (have_posts()) :
 
 		<article id="post-<?php the_ID(); ?>" <?php post_class('content-width'); ?>>
 
-			<?php the_post_thumbnail('thumbnail'); ?>
+			<?php get_template_part('includes/get_post_thumbnail') ?>
 
 			<h3><?php the_title(); ?></h3>
 			<ul>

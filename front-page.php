@@ -4,7 +4,7 @@
 	<?php get_template_part('includes/header'); ?>
 </header>
 
-<div class="content-width">
+<div class="title-wrapper content-width">
 	<h1><?php the_title(); ?>
 	</h1>
 	<p>フロント</p>
@@ -94,7 +94,7 @@
 
 
 </main>
-<img class="hero-img" src="<?php echo get_template_directory_uri(); ?>/images/site-map.png" alt="">
+<!-- <img class="hero-img" src="<?php echo get_template_directory_uri(); ?>/images/site-map.png" alt=""> -->
 
 
 

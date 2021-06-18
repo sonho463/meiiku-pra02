@@ -7,6 +7,8 @@ body {
 
 }
 
+
+
 li {
 	list-style: none;
 }
@@ -187,6 +189,15 @@ button {
   margin-left: .5em;
 }
 
+// front-page.php
+
+// >>>タイトル
+.title-wrapper {
+	text-align: center;
+}
+
+
+// >>>最新記事３つ
 .wrapper {
 	display: flex;
 	flex-wrap: wrap;
@@ -202,8 +213,11 @@ button {
 
 .new-posts__wrapper{
 	display:flex;
+	flex-wrap: wrap;
+	justify-content: center;
 }
 
 .new-posts{
-	width: 300px;
+	min-width: 300px;
+
 }
