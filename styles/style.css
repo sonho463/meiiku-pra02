@@ -171,6 +171,27 @@ button {
   margin-left: .5em;
 }
 
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.article-wrapper {
+  width: 300px;
+  background-color: #ffbdc3;
+  margin: 30px;
+  padding: 20px;
+  border-radius: 30px;
+}
+
+.new-posts__wrapper {
+  display: flex;
+}
+
+.new-posts {
+  width: 300px;
+}
+
 @media (min-width: 960px) {
   .nav-menu {
     display: flex;

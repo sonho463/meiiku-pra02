@@ -8,79 +8,83 @@
 	<h2>コラム〜授業をする前に<br>ここのループではWordPress標準の投稿機能の記事を表示します。</h2>
 
 	<h2>カテゴリリスト</h2>
-	<p>
+	<ul class="cat-list">
 		<?php
 		$args = [
 			'title_li' => ''
 		];
 		wp_list_categories($args);
 		?>
-	</p>
+	</ul>
 
 	<?php ?>
 
 
 	<h2>投稿一覧を表示</h2>
-	<?php
-	if (have_posts()) {
-		while (have_posts()) {
-			the_post(); ?>
+	<div class="wrapper">
+		<?php
+		if (have_posts()) {
+			while (have_posts()) {
+				the_post(); ?>
 
-			<a href="<?php echo the_permalink() ?>">
-				<h3><?php the_title(); ?></h3>
-			</a>
-			<ul>
-				<li>
-					<p><?php the_author(); ?></p>
-				</li>
-				<li>
-					カテゴリ：<?php the_category('／','<span>'); ?>
-				</li>
-				<li>
-					タグ：
-					<?php
-					$tags = get_the_tags();
-					if($tags) :
-					foreach ($tags as $tag) :
-						$name = $tag->name;
-						$slug = $tag->slug;
-					?>
-						<a href="<?php get_template_directory_uri(); ?>/tag/<?php echo $slug; ?>">#<?php echo $name; ?></a>,
-					<?php endforeach; ?>
-					<?php else : ?>
-					<span>タグ設定無し</span>
-					<?php endif;?>
-				</li>
-				<li>
-					<?php
-					$year = get_the_date('Y');
-					$month = get_the_date('m');
-					$day = get_the_date('d');
-					?>
-					<a href="<?php echo get_year_link($year); ?>;">
-						<span><?php echo get_the_date('Y'); ?></span>
-					</a>年
-					<a href="<?php echo get_month_link($year, $month); ?>;">
-						<span><?php echo get_the_date('m'); ?></span>
-					</a>月
-					<a href="<?php echo get_day_link($year, $month, $day); ?>;">
-						<span><?php echo get_the_date('d'); ?></span>
-					</a>日
+				<div class="article-wrapper">
+					<div class="post-heading">
+						<a href="<?php echo the_permalink() ?>">
+							<h3><?php the_title(); ?></h3>
+						</a>
+						<?php
+						if (has_post_thumbnail()) {
+							the_post_thumbnail('medium');
+						} else { ?>
+							<img src="<?php echo get_template_directory_uri(); ?>/images/img_logo.png" alt="デフォルト画像">
+						<?php
+						}
+						?>
+					</div><!-- /.post-heading -->
+					<div class="article-description">
+						<?php the_author(); ?>
+						カテゴリ：<?php the_category('／', '<span>'); ?>
+						タグ：
+						<?php
+						$tags = get_the_tags();
+						if ($tags) :
+							foreach ($tags as $tag) :
+								$name = $tag->name;
+								$slug = $tag->slug;
+						?>
+								<a href="<?php get_template_directory_uri(); ?>/tag/<?php echo $slug; ?>">#<?php echo $name; ?></a>,
+							<?php endforeach; ?>
+						<?php else : ?>
+							<span>タグ設定無し</span>
+						<?php endif; ?>
+						</li>
+						<li>
+							<?php
+							$year = get_the_date('Y');
+							$month = get_the_date('m');
+							$day = get_the_date('d');
+							?>
+							<a href="<?php echo get_year_link($year); ?>;">
+								<span><?php echo get_the_date('Y'); ?></span>
+							</a>年
+							<a href="<?php echo get_month_link($year, $month); ?>;">
+								<span><?php echo get_the_date('m'); ?></span>
+							</a>月
+							<a href="<?php echo get_day_link($year, $month, $day); ?>;">
+								<span><?php echo get_the_date('d'); ?></span>
+							</a>日
+					</div>
+				</div><!-- /.article-wrapper -->
 
-			</ul>
-
-
-
-			<hr>
-
+			<?php
+			}
+		} else {
+			?>
+			<p>投稿がありません</p>
 		<?php
 		}
-	} else {
 		?>
-		<p>投稿がありません</p>
-	<?php
-	}
-	?>
+	</div><!-- /.wrapper -->
 
 
 </main>
