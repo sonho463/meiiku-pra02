@@ -56,6 +56,9 @@ if (have_posts()) :
 					<a href="<?php echo get_day_link($year, $month, $day); ?>;">
 						<span><?php echo get_the_date('d'); ?></span>
 					</a>日
+				</li>
+
+
 
 			</ul>
 
