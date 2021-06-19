@@ -7,11 +7,11 @@
 <div class="title-wrapper content-width">
 	<h1><?php the_title(); ?>
 	</h1>
+	<a href="https://meiiku.com/" target="_blank" rel="noopener noreferrer">
+		命育サイトはこちら
+	</a>
 	<p>フロント</p>
 	<p>テンプレートはfront-page.php</p>
-	<a href="https://meiiku.com/" target="_blank" rel="noopener noreferrer">
-		<h2>現在の命育サイトはこちら</h2>
-	</a>
 
 </div>
 

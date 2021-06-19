@@ -1,4 +1,4 @@
-<div class="header-nav">
+<div id="header-nav" class="header-nav">
 	<div class="header-nav__logo">
 		<a href="<?php bloginfo('url') ?>">
 			<img src="<?php echo get_template_directory_uri(); ?>/images/img_logo.png" alt="">
@@ -13,14 +13,20 @@
 	</div><!-- /.header-nav__logo -->
 
 	<nav>
-	<?php wp_nav_menu( array(
-		'theme_location' => 'global-menu',
-		'menu_class' => 'nav-menu',
+		<?php wp_nav_menu(array(
+			'theme_location' => 'global-menu',
+			'menu_class' => 'nav-menu',
 		))
-	?>
+		?>
+
+<?php wp_nav_menu(array(
+			'theme_location' => 'global-menu',
+			'menu_class' => 'sp-menu',
+		))
+		?>
 
 
-		<button class="hamburger">
+		<button id="hamburger-button" class="hamburger">
 			<span></span><span></span><span></span>
 		</button>
 	</nav>

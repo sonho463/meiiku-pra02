@@ -61,7 +61,11 @@ nav {
   }
 }
 
-.nav-menu {
+.nav-menu{
+	display: none;
+}
+
+.sp-menu {
   display: none;
 	position: absolute;
 	top: 0;
@@ -71,7 +75,8 @@ nav {
 	text-align: center;
 	list-style-type: none;
   &.open {
-    display: inline-block;
+		display: inline-block;
+		background-color: white;
   }
 }
 

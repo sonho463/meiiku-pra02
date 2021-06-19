@@ -1,4 +1,4 @@
-.nav-menu {
+.nav-menu{
 	display: flex;
 	width:auto;
 	position: static;
@@ -12,6 +12,10 @@
 			color: $--main-font-cBlue;
 		}
 	}
+}
+
+.sp-menu{
+	display: none;
 }
 
 .hamburger {
