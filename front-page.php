@@ -9,13 +9,16 @@
 	</h1>
 	<p>フロント</p>
 	<p>テンプレートはfront-page.php</p>
+	<a href="https://meiiku.com/" target="_blank" rel="noopener noreferrer">
+		<h2>現在の命育サイトはこちら</h2>
+	</a>
 
 </div>
 
 
 <main class="new-posts__wrapper content-width">
 	<div class="new-posts">
-		<h2>最新の投稿！</h2>
+		<h2>コラムの最新投稿！</h2>
 		<ul>
 			<?php
 			$args = array(
@@ -31,8 +34,12 @@
 				<li>
 					<?php the_author(); ?>
 				</li>
+				<li>
+					カテゴリ：<?php the_category('／', '<span>'); ?>
+				</li>
+				<?php get_template_part('includes/get_the_tags_with_sharp') ?>
 				<hr>
-				<?php
+			<?php
 			endforeach; // ループの終了
 			wp_reset_postdata(); // 直前のクエリを復元する
 			?>
@@ -57,8 +64,14 @@
 				<li>
 					<?php the_author(); ?>
 				</li>
+				<li>
+					カテゴリ：<?php get_template_part('includes/get_the_terms_of_custom_posts', null, 'material_genre') ?>
+				</li>
+				<li>
+					タグ：<?php get_template_part('includes/get_the_terms_of_custom_posts', null, 'material_tag') ?>
+				</li>
 				<hr>
-				<?php
+			<?php
 			endforeach; // ループの終了
 			wp_reset_postdata(); // 直前のクエリを復元する
 			?>
@@ -68,28 +81,34 @@
 
 	<div class="new-posts">
 		<h2>実績の最新投稿</h2>
-		<ul>
-			<?php
-			$args = array(
-				'posts_per_page' => 3, // 表示件数の指定
-				'post_type' => 'performance',
-			);
-			$posts = get_posts($args);
-			foreach ($posts as $post) : // ループの開始
-				setup_postdata($post); // 記事データの取得
-			?>
+		<?php
+		$args = array(
+			'posts_per_page' => 3, // 表示件数の指定
+			'post_type' => 'performance',
+		);
+		$posts = get_posts($args);
+		foreach ($posts as $post) : // ループの開始
+			setup_postdata($post); // 記事データの取得
+		?>
+			<ul>
 				<li>
 					<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
 				</li>
 				<li>
 					<?php the_author(); ?>
 				</li>
+				<li>
+					カテゴリ：<?php get_template_part('includes/get_the_terms_of_custom_posts', null, 'performance_genre') ?>
+				</li>
+				<li>
+					タグ：<?php get_template_part('includes/get_the_terms_of_custom_posts', null, 'performance_tag') ?>
+				</li>
 				<hr>
-				<?php
-			endforeach; // ループの終了
-			wp_reset_postdata(); // 直前のクエリを復元する
-			?>
-		</ul>
+			</ul>
+		<?php
+		endforeach; // ループの終了
+		wp_reset_postdata(); // 直前のクエリを復元する
+		?>
 	</div><!-- /.new-posts -->
 
 

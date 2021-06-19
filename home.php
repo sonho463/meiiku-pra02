@@ -32,40 +32,27 @@
 						<a href="<?php echo the_permalink() ?>">
 							<h3><?php the_title(); ?></h3>
 						</a>
-						<?php get_template_part('includes/get_post_thumbnail' )?>
+						<?php get_template_part('includes/get_post_thumbnail') ?>
 					</div><!-- /.post-heading -->
 					<div class="article-description">
 						<?php the_author(); ?>
 						カテゴリ：<?php the_category('／', '<span>'); ?>
-						タグ：
+						<?php get_template_part('includes/get_the_tags_with_sharp') ?>
+
 						<?php
-						$tags = get_the_tags();
-						if ($tags) :
-							foreach ($tags as $tag) :
-								$name = $tag->name;
-								$slug = $tag->slug;
+						$year = get_the_date('Y');
+						$month = get_the_date('m');
+						$day = get_the_date('d');
 						?>
-								<a href="<?php get_template_directory_uri(); ?>/tag/<?php echo $slug; ?>">#<?php echo $name; ?></a>,
-							<?php endforeach; ?>
-						<?php else : ?>
-							<span>タグ設定無し</span>
-						<?php endif; ?>
-						</li>
-						<li>
-							<?php
-							$year = get_the_date('Y');
-							$month = get_the_date('m');
-							$day = get_the_date('d');
-							?>
-							<a href="<?php echo get_year_link($year); ?>;">
-								<span><?php echo get_the_date('Y'); ?></span>
-							</a>年
-							<a href="<?php echo get_month_link($year, $month); ?>;">
-								<span><?php echo get_the_date('m'); ?></span>
-							</a>月
-							<a href="<?php echo get_day_link($year, $month, $day); ?>;">
-								<span><?php echo get_the_date('d'); ?></span>
-							</a>日
+						<a href="<?php echo get_year_link($year); ?>;">
+							<span><?php echo get_the_date('Y'); ?></span>
+						</a>年
+						<a href="<?php echo get_month_link($year, $month); ?>;">
+							<span><?php echo get_the_date('m'); ?></span>
+						</a>月
+						<a href="<?php echo get_day_link($year, $month, $day); ?>;">
+							<span><?php echo get_the_date('d'); ?></span>
+						</a>日
 					</div>
 				</div><!-- /.article-wrapper -->
 
