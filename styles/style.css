@@ -1,6 +1,7 @@
 @charset "UTF-8";
 body {
-  font-family: "Times New Roman", "YuMincho", "Hiragino Mincho ProN", "Yu Mincho", "MS PMincho", serif;
+  font-family: "Times New Roman", "M PLUS 1p", "Hiragino Mincho ProN", "Yu Mincho", "MS PMincho", serif;
+  font-weight: 300;
   margin: 0;
   box-sizing: border-box;
   background-color: #fff7e5;
@@ -22,7 +23,10 @@ li {
   background-color: #fff7e5;
 }
 
-.header-nav a:link, .header-nav a:active, .header-nav a:hover, .header-nav a:visited {
+.header-nav a:link,
+.header-nav a:active,
+.header-nav a:hover,
+.header-nav a:visited {
   color: #707070;
 }
 
@@ -61,6 +65,15 @@ nav {
 
 .nav-menu {
   display: none;
+  font-family: 'M PLUS 1p', sans-serif;
+  font-weight: 900;
+}
+
+.menu-item {
+  border-right: dashed 1px #333;
+  font-size: 16px;
+  padding: 30px 20px;
+  text-align: center;
 }
 
 .sp-menu {
@@ -91,7 +104,10 @@ footer {
   background-color: #fff7e5;
 }
 
-footer a:link, footer a:active, footer a:hover, footer a:visited {
+footer a:link,
+footer a:active,
+footer a:hover,
+footer a:visited {
   color: #707070;
 }
 
@@ -101,7 +117,7 @@ footer ul {
 }
 
 footer ul li {
-  margin: 0 10px;
+  margin: 0;
 }
 
 footer ul li:hover {
@@ -125,7 +141,7 @@ footer ul li:hover {
   width: 500px;
   /* フォームの範囲がわかるようにする */
   padding: 1em;
-  border: 1px solid #CCC;
+  border: 1px solid #ccc;
   border-radius: 1em;
 }
 
@@ -140,7 +156,8 @@ form li + li {
   text-align: right;
 }
 
-input, textarea {
+input,
+textarea {
   /* すべてのテキストフィールドのフォント設定を一致させる
      デフォルトで、textarea は等幅フォントが設定されている */
   font: 1em sans-serif;
@@ -173,7 +190,7 @@ textarea {
 button {
   /* このマージンは、ラベルとテキストフィールドの間のスペースと
      おおよそ同じスペースを表す */
-  margin-left: .5em;
+  margin-left: 0.5em;
 }
 
 .title-wrapper {
@@ -213,14 +230,16 @@ button {
     justify-content: center;
     font-size: 1.5em;
   }
-  .nav-menu li {
-    margin: 0 10px;
-  }
   .nav-menu li :hover {
     background-color: #faf8d2;
     color: #1470a3;
   }
-  .sp-menu {
+  .menu-item :hover {
+    border-bottom: solid 2px green;
+    transform: translateX(100%);
+    transition: 1s;
+  }
+  .sp-menu.open {
     display: none;
   }
   .hamburger {

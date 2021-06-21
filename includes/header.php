@@ -9,9 +9,8 @@
 				家庭でできる性教育サイト
 			</h2>
 		</div><!-- /.header-nav__text -->
-
 	</div><!-- /.header-nav__logo -->
-
+	
 	<nav>
 		<?php wp_nav_menu(array(
 			'theme_location' => 'global-menu',

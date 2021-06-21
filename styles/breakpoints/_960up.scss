@@ -6,7 +6,6 @@
 	font-size: 1.5em;
 
 	li{
-		margin: 0 10px;
 		:hover{
 			background-color: $--main-bg-cCream;
 			color: $--main-font-cBlue;
@@ -14,7 +13,16 @@
 	}
 }
 
-.sp-menu{
+.menu-item{
+	:hover{
+		border-bottom: solid 2px green;
+		transform: translateX(100%);
+		transition: 1s;
+	}
+
+}
+
+.sp-menu.open{
 	display: none;
 }
 
