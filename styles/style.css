@@ -69,7 +69,11 @@ nav {
   font-weight: 900;
 }
 
-.menu-item {
+.nav-menu li:first-child {
+  border-left: dashed 1px #333;
+}
+
+.nav-menu > li {
   border-right: dashed 1px #333;
   font-size: 16px;
   padding: 30px 20px;
@@ -220,6 +224,10 @@ button {
   min-width: 300px;
   max-width: 350px;
   min-height: 500px;
+}
+
+.footer-nav > li {
+  padding: 20px;
 }
 
 @media (min-width: 960px) {

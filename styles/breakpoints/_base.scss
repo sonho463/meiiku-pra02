@@ -68,14 +68,17 @@ nav {
   // font-family: "M PLUS Rounded 1c", sans-serif;
 	font-family: 'M PLUS 1p', sans-serif;
   font-weight: 900;
+	li:first-child{
+		border-left: dashed 1px #333;
+	}
+	> li{
+		border-right: dashed 1px #333;
+		font-size:16px;
+		padding: 30px 20px;
+		text-align: center;
+	}
 }
 
-.menu-item {
-	border-right: dashed 1px #333;
-	font-size:16px;
-	padding: 30px 20px;
-	text-align: center;
-}
 
 .sp-menu {
   display: none;
@@ -235,4 +238,11 @@ button {
   min-width: 300px;
   max-width: 350px;
   min-height: 500px;
+}
+
+.footer-nav{
+	> li{
+		padding: 20px;
+	}
+
 }
