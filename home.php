@@ -63,7 +63,7 @@
 							?>
 						</p>
 					</div><!-- /.content -->
-					<span><a href="<?php echo the_permalink() ?>">記事を読む</a></span>
+					<span class="more-read"><a href="<?php echo the_permalink() ?>">記事を読む</a></span>
 				</div><!-- /.article-wrapper -->
 
 			<?php
