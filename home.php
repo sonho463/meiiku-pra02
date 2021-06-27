@@ -54,6 +54,16 @@
 							<span><?php echo get_the_date('d'); ?></span>
 						</a>日
 					</div>
+					<div class="home-content-wrapper">
+						<p  class="home-content">
+							<?php
+							$content  = get_the_content();
+							$text     = strip_tags(strip_shortcodes($content));
+							echo $text;
+							?>
+						</p>
+					</div><!-- /.content -->
+					<span><a href="<?php echo the_permalink() ?>">記事を読む</a></span>
 				</div><!-- /.article-wrapper -->
 
 			<?php
