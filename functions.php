@@ -10,6 +10,19 @@ add_action('init', function () {
 });
 
 
+// 投稿アーカイブページ設定
+function post_has_archive( $args, $post_type ) {
+
+	if ( 'post' == $post_type ) {
+		$args['rewrite'] = true;
+		$args['has_archive'] = 'columns'; //任意のスラッグ名
+	}
+	return $args;
+
+}
+add_filter( 'register_post_type_args', 'post_has_archive', 10, 2 );
+
+
 //カスタム投稿タイプの設定
 function meiiku_create_post_type()
 {
@@ -151,3 +164,24 @@ function create_performance_taxonomy()
 	);
 }
 add_action('init', 'create_performance_taxonomy');
+
+
+function get_breadcrumb() {
+	echo '<a href="'.home_url().'" rel="nofollow">Home</a>';
+	if (is_category() || is_single()) {
+			echo "&nbsp;&nbsp;&#187;&nbsp;&nbsp;";
+			the_category(' &bull; ');
+					if (is_single()) {
+							echo " &nbsp;&nbsp;&#187;&nbsp;&nbsp; ";
+							the_title();
+					}
+	} elseif (is_page()) {
+			echo "&nbsp;&nbsp;&#187;&nbsp;&nbsp;";
+			echo the_title();
+	} elseif (is_search()) {
+			echo "&nbsp;&nbsp;&#187;&nbsp;&nbsp;Search Results for... ";
+			echo '"<em>';
+			echo the_search_query();
+			echo '</em>"';
+	}
+}

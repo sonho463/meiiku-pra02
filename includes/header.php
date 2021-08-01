@@ -10,7 +10,7 @@
 			</h2>
 		</div><!-- /.header-nav__text -->
 	</div><!-- /.header-nav__logo -->
-	
+
 	<nav>
 		<?php wp_nav_menu(array(
 			'theme_location' => 'global-menu',
@@ -31,3 +31,5 @@
 	</nav>
 
 </div><!-- /.header-nav -->
+<div class="breadcrumb"><?php get_breadcrumb(); ?></div>
+

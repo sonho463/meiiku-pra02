@@ -21,3 +21,12 @@ function switchByWidth(){
 //ロードとリサイズの両方で同じ処理を付与する
 window.onload = switchByWidth;
 window.onresize = switchByWidth;
+
+// サブメニュー表示非表示
+
+// const subMenu = document.querySelector('.sub-menu');
+// const navMaterial=document.getElementById('menu-item-70')
+
+// navMaterial.addEventListener('mouseover',function(){
+// 	subMenu.classList.toggle('sub-menu-open');
+// });

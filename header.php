@@ -19,9 +19,11 @@ endif;
 	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/styles/style.css">
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@300;700&family=M+PLUS+Rounded+1c:wght@900&display=swap" rel="stylesheet">	<title><?php echo $pageTitle; ?> | <?php bloginfo('name') ?></title>
+	<link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@300;700&family=M+PLUS+Rounded+1c:wght@900&display=swap" rel="stylesheet">
+	<title><?php echo $pageTitle; ?> | <?php bloginfo('name') ?></title>
 	<?php wp_head(); ?>
 </head>
+
 
 <body <?php body_class(); ?>>
 	<?php wp_body_open(); ?>
