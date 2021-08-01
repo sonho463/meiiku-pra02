@@ -1,3 +1,11 @@
+<?php get_header(); ?>
+<header>
+	<?php get_template_part('includes/header'); ?>
+</header>
+
+
+
+
 <?php if (have_posts()): ?>
 <?php
   if (isset($_GET['s']) && empty($_GET['s'])) {
@@ -16,3 +24,11 @@
 <?php else: ?>
 検索されたキーワードにマッチする記事はありませんでした
 <?php endif; ?>
+
+
+
+
+<?php get_footer(); ?>
+</body>
+
+</html>

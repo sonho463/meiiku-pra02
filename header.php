@@ -6,6 +6,8 @@ if (is_home()) :
 	$pageTitle = 'コラム〜授業をする前に';
 elseif (is_archive()) :
 	$pageTitle =  wp_strip_all_tags(get_the_archive_title());
+elseif (is_search()) :
+	$pageTitle =  '「'.get_search_query().'」の検索結果';
 else :
 	$pageTitle = get_the_title();
 endif;
@@ -20,6 +22,8 @@ endif;
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@300;700&family=M+PLUS+Rounded+1c:wght@900&display=swap" rel="stylesheet">
+
+
 	<title><?php echo $pageTitle; ?> | <?php bloginfo('name') ?></title>
 	<?php wp_head(); ?>
 </head>
@@ -27,3 +31,5 @@ endif;
 
 <body <?php body_class(); ?>>
 	<?php wp_body_open(); ?>
+
+	<?php the_title(); ?>

@@ -29,6 +29,7 @@ function meiiku_create_post_type()
 	register_post_type(
 		'materials',
 		array(
+			'exclude_from_search' => false, // false 検索対象に含める
 			'labels' => array(
 				'name' => '教材名',
 				'singular_name' => '教材名',
@@ -51,6 +52,7 @@ function meiiku_create_post_type()
 	register_post_type(
 		'performance',
 		array(
+			'exclude_from_search' => false, // false 検索対象に含める
 			'labels' => array(
 				'name' => '導入実績',
 				'singular_name' => '導入実績',
@@ -185,3 +187,15 @@ function get_breadcrumb() {
 			echo '</em>"';
 	}
 }
+
+// wp_head()からtitleタグを削除する
+remove_action( 'wp_head', '_wp_render_title_tag', 1 );
+
+//　カスタム投稿タイプを検索結果に含める
+/*【出力カスタマイズ】検索対象をカスタム投稿タイプで絞り込む */
+function my_pre_get_posts($query) {
+  if ( !is_admin() && $query->is_main_query() && $query->is_search() ) {
+    $query->set( 'post_type', array('post','page','materials','performance') );
+  }
+}
+add_action( 'pre_get_posts','my_pre_get_posts' );

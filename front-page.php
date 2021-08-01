@@ -12,10 +12,7 @@
 	</a>
 	<p>フロント</p>
 	<p>テンプレートはfront-page.php</p>
-	<div class="search">
-		<?php get_search_form(); ?>
-
-	</div><!-- /.search -->
+	
 
 </div>
 
@@ -24,6 +21,11 @@
 	<div class="new-posts__wrapper">
 		<div class="article">
 			<h2>コラムの最新投稿！</h2>
+			<div class="search">
+		<?php get_search_form(); ?>
+
+	</div><!-- /.search -->
+
 			<div class="new-posts">
 				<?php
 				$args = array(
